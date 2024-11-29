@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MúsicaPlayPauseStopySeekBar</string>
+    <string name="opc_salir">Salir</string>
+    <string name="titleMenu">Música</string>
+    <string name="titleAD">Salir del programa</string>
+    <string name="msgAD">¿Quieres salir del programa</string>
+    <string name="posAD">Si</string>
+    <string name="negAD">No</string>
+</resources>
