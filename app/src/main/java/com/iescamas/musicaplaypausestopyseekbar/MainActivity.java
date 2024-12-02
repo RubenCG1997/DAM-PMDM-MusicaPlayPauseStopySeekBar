@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
@@ -81,9 +82,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void stop() {
+
             mediaPlayer.stop();
-            mediaPlayer.reset();
-            mediaPlayer = MediaPlayer.create(this,R.raw.vals_ruso);
+        try {
+            mediaPlayer.prepare();
+            mediaPlayer.seekTo(0);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private void pause() {
