@@ -82,14 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void stop() {
-
-            mediaPlayer.stop();
-        try {
-            mediaPlayer.prepare();
-            mediaPlayer.seekTo(0);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+       mediaPlayer.stop();
+       mediaPlayer.reset();
+       mediaPlayer = MediaPlayer.create(this,R.raw.vals_ruso);
 
     }
 
